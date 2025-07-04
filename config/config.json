@@ -1,0 +1,9 @@
+{
+    "snsTopicArn": "arn:aws:sns:us-east-1:0123456789:MySNSTopic",
+    "alarmSettings": {
+        "threshold": 10,
+        "periodMinutes": 1,
+        "evaluationPeriods": 5,
+        "datapointsToAlarm": 1
+    }
+}
