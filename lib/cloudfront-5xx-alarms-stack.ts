@@ -42,6 +42,7 @@ export class Cloudfront5xxAlarmsStack extends cdk.Stack {
             alarmDescription: `5xxErrorRate alarm for CloudFront distribution ${props.distribution.Id}`,
             actionsEnabled: true,
             treatMissingData: cloudwatch.TreatMissingData.NOT_BREACHING,
+            alarmName: `5XXErrorRate${props.alarmSettings.threshold}%Alarm-${props.distribution.Id}`,
         });
 
         // Configure alarm to notify SNS topic
