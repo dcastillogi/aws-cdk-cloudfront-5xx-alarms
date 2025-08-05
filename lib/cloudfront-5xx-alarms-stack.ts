@@ -32,6 +32,7 @@ export class Cloudfront5xxAlarmsStack extends cdk.Stack {
                 metricName: "5xxErrorRate",
                 dimensionsMap: {
                     DistributionId: props.distribution.Id!,
+                    Region: "Global"
                 },
                 statistic: "Average",
                 period: cdk.Duration.minutes(props.alarmSettings.periodMinutes),
